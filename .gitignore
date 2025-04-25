@@ -1,6 +1,21 @@
+# Ignora todo dentro de assets...
 assets/*
+
+# ...pero permite archivos PHP (como AppAsset.php)
+!assets/*.php
+
+# ...y permite el .gitignore de esa carpeta
 !assets/.gitignore
+
+# Ignora todo lo de runtime menos su .gitignore
 protected/runtime/*
 !protected/runtime/.gitignore
+
+# Ignora bases de datos SQLite en protected/data
 protected/data/*.db
+
+# Ignora vistas del tema classic
 themes/classic/views/
+
+# Ignora toda la carpeta vendor (se puede regenerar con composer install)
+vendor/
